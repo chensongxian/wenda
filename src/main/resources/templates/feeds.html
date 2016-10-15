@@ -1,0 +1,237 @@
+#parse("header.html")
+
+#macro (comment_question, $vo)
+<div class="feed-item folding feed-item-hook feed-item-2
+                        " feed-item-a="" data-type="a" id="feed-2" data-za-module="FeedItem" data-za-index="">
+    <meta itemprop="ZReactor" data-id="389034"
+          data-meta="{&quot;source_type&quot;: &quot;promotion_answer&quot;, &quot;voteups&quot;: 4168, &quot;comments&quot;: 69, &quot;source&quot;: []}">
+    <div class="feed-item-inner">
+        <div class="avatar">
+            <a title="$!{vo.userName}" data-tip="p$t$amuro1230" class="zm-item-link-avatar" target="_blank"
+               href="/user/${vo.userId}">
+                <img src="$!{vo.userHead}" class="zm-item-img-avatar"></a>
+        </div>
+        <div class="feed-main">
+            <div class="feed-content" data-za-module="AnswerItem">
+                <meta itemprop="answer-id" content="389034">
+                <meta itemprop="answer-url-token" content="13174385">
+
+                <div class="expandable entry-body">
+                    <div class="zm-item-answer-author-info">
+                        <a class="author-link" data-tip="p$b$amuro1230" target="_blank" href="/user/$!{vo.userId}">$!{vo.userName}</a>
+                        评论了该问题 ，$data.format('yyyy-MM-dd HH:mm:ss', $!{vo.createdDate})
+                    </div>
+
+                    <div class="zm-item-rich-text expandable js-collapse-body" data-resourceid="123114"
+                         data-action="/answer/content" data-author-name="李淼"
+                         data-entry-url="/question/19857995/answer/13174385">
+                        <div class="zh-summary summary clearfix"><a class="author-link" data-tip="p$b$amuro1230"
+                                                                    target="_blank" href="/question/$!{vo.questionId}">${vo.questionTitle}</a>
+                        </div>
+                        <p class="zm-profile-item-text">$!{vo.comment}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+#end
+
+#macro (follow_question, $vo)
+<div class="feed-item folding feed-item-hook feed-item-2
+                        " feed-item-a="" data-type="a" id="feed-2" data-za-module="FeedItem" data-za-index="">
+    <meta itemprop="ZReactor" data-id="389034"
+          data-meta="{&quot;source_type&quot;: &quot;promotion_answer&quot;, &quot;voteups&quot;: 4168, &quot;comments&quot;: 69, &quot;source&quot;: []}">
+    <div class="feed-item-inner">
+        <div class="avatar">
+            <a title="$!{vo.userName}" data-tip="p$t$amuro1230" class="zm-item-link-avatar" target="_blank"
+               href="/user/${vo.userId}">
+                <img src="$!{vo.userHead}" class="zm-item-img-avatar"></a>
+        </div>
+        <div class="feed-main">
+            <div class="feed-content" data-za-module="AnswerItem">
+                <meta itemprop="answer-id" content="389034">
+                <meta itemprop="answer-url-token" content="13174385">
+
+                <div class="expandable entry-body">
+
+                    <div class="zm-item-answer-author-info">
+                        <a class="author-link" data-tip="p$b$amuro1230" target="_blank" href="/user/$!{vo.userId}">$!{vo.userName}</a>
+                        关注了该问题 ，$data.format('yyyy-MM-dd HH:mm:ss', $!{vo.createdDate})
+                    </div>
+
+                    <div class="zm-item-rich-text expandable js-collapse-body" data-resourceid="123114"
+                         data-action="/answer/content" data-author-name="李淼"
+                         data-entry-url="/question/19857995/answer/13174385">
+                        <div class="zh-summary summary clearfix"><a class="author-link" data-tip="p$b$amuro1230"
+                                                                    target="_blank" href="/question/$!{vo.questionId}">${vo.questionTitle}</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+#end
+
+
+
+
+
+#macro (add_question, $vo)
+<div class="feed-item folding feed-item-hook feed-item-2
+                        " feed-item-a="" data-type="a" id="feed-2" data-za-module="FeedItem" data-za-index="">
+    <meta itemprop="ZReactor" data-id="389034"
+          data-meta="{&quot;source_type&quot;: &quot;promotion_answer&quot;, &quot;voteups&quot;: 4168, &quot;comments&quot;: 69, &quot;source&quot;: []}">
+    <div class="feed-item-inner">
+        <div class="avatar">
+            <a title="$!{vo.userName}" data-tip="p$t$amuro1230" class="zm-item-link-avatar" target="_blank"
+               href="/user/${vo.userId}">
+                <img src="$!{vo.userHead}" class="zm-item-img-avatar"></a>
+        </div>
+        <div class="feed-main">
+            <div class="feed-content" data-za-module="AnswerItem">
+                <meta itemprop="answer-id" content="389034">
+                <meta itemprop="answer-url-token" content="13174385">
+
+                <div class="expandable entry-body">
+
+                    <div class="zm-item-answer-author-info">
+                        <a class="author-link" data-tip="p$b$amuro1230" target="_blank" href="/user/$!{vo.userId}">$!{vo.userName}</a>
+                        发表了提问 ，$data.format('yyyy-MM-dd HH:mm:ss', $!{vo.createdDate})
+                    </div>
+
+                    <div class="zm-item-rich-text expandable js-collapse-body" data-resourceid="123114"
+                         data-action="/answer/content" data-author-name="李淼"
+                         data-entry-url="/question/19857995/answer/13174385">
+                        <div class="zh-summary summary clearfix"><a class="author-link" data-tip="p$b$amuro1230"
+                                                                    target="_blank" href="/question/$!{vo.questionId}">${vo.questionTitle}</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+#end
+
+#macro (like_comment, $vo)
+<div class="feed-item folding feed-item-hook feed-item-2
+                        " feed-item-a="" data-type="a" id="feed-2" data-za-module="FeedItem" data-za-index="">
+    <meta itemprop="ZReactor" data-id="389034"
+          data-meta="{&quot;source_type&quot;: &quot;promotion_answer&quot;, &quot;voteups&quot;: 4168, &quot;comments&quot;: 69, &quot;source&quot;: []}">
+    <div class="feed-item-inner">
+        <div class="avatar">
+            <a title="$!{vo.userName}" data-tip="p$t$amuro1230" class="zm-item-link-avatar" target="_blank"
+               href="/user/${vo.userId}">
+                <img src="$!{vo.userHead}" class="zm-item-img-avatar"></a>
+        </div>
+        <div class="feed-main">
+            <div class="feed-content" data-za-module="AnswerItem">
+                <meta itemprop="answer-id" content="389034">
+                <meta itemprop="answer-url-token" content="13174385">
+
+                <div class="expandable entry-body">
+
+                    <div class="zm-item-answer-author-info">
+                        <a class="author-link" data-tip="p$b$amuro1230" target="_blank" href="/user/$!{vo.userId}">$!{vo.userName}</a>
+                        赞了评论 ，$data.format('yyyy-MM-dd HH:mm:ss', $!{vo.createdDate})
+                    </div>
+
+                    <div class="zm-item-rich-text expandable js-collapse-body" data-resourceid="123114"
+                         data-action="/answer/content" data-author-name="李淼"
+                         data-entry-url="/question/19857995/answer/13174385">
+                        <div class="zh-summary summary clearfix"><a class="author-link" data-tip="p$b$amuro1230"
+                                                                    target="_blank" href="/question/$!{vo.questionId}">${vo.questionTitle}</a>
+                            <p class="zm-profile-item-text">$!{vo.comment}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+#end
+
+<link rel="stylesheet" href="../styles/index.css">
+<link rel="stylesheet" href="../styles/detail.css">
+<div class="zg-wrap zu-main clearfix " role="main">
+    <div class="zu-main-content">
+        <div class="zu-main-content-inner">
+            <div class="zg-section" id="zh-home-list-title">
+                <ul id="myTab" class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#newMessage" data-toggle="tab" id="message">最新动态</a>
+                    </li>
+                    <li class="nc-req-auth">
+                        <a href="#youFollowee" data-toggle="tab" id="followee">收到的关注</a>
+                    </li>
+                    <li class="nc-req-auth">
+                        <a href="#youAgree" data-toggle="tab" id="agree">收到的赞</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade in active" data-feedtype="topstory" id="newMessage"
+                     data-widget="navigable"
+                     data-navigable-options="{&quot;items&quot;:&quot;&gt; .zh-general-list .feed-content&quot;,&quot;offsetTop&quot;:-82}">
+                    <a href="javascript:;" class="zu-main-feed-fresh-button" id="zh-main-feed-fresh-button"
+                       style="display:none"></a>
+                    <div id="js-home-feed-list" class="zh-general-list topstory clearfix"
+                         data-init="{&quot;params&quot;: {}, &quot;nodename&quot;: &quot;TopStory2FeedList&quot;}"
+                         data-delayed="true" data-za-module="TopStoryFeedList">
+
+                        #foreach($vo in $feeds)
+                        #if($vo.type == 1)
+                            #comment_question($vo)
+                        #elseif($vo.type == 4)
+                            #follow_question($vo)
+                        #elseif($vo.type==6)
+                            #add_question($vo)
+                        #elseif($vo.type==0)
+                            #like_comment($vo)
+                        #end
+                        #end
+                    </div>
+                    <a href="javascript:;" id="load-more-message" data-method="next" class="zg-btn-white zg-r3px zu-button-more" style="">更多</a>
+                </div>
+
+                <div class="tab-pane fade" data-feedtype="topstory" id="youFollowee"
+                     data-widget="navigable"
+                     data-navigable-options="{&quot;items&quot;:&quot;&gt; .zh-general-list .feed-content&quot;,&quot;offsetTop&quot;:-82}">
+                    <a href="javascript:;" class="zu-main-feed-fresh-button" id="zh-main-followee-fresh-button"
+                       style="display:none"></a>
+                    <div id="js-followee-feed-list" class="zh-general-list topstory clearfix"
+                         data-init="{&quot;params&quot;: {}, &quot;nodename&quot;: &quot;TopStory2FeedList&quot;}"
+                         data-delayed="true" data-za-module="TopStoryFeedList">
+
+
+                    </div>
+                    <a href="javascript:;" id="load-more-followee" data-method="next" class="zg-btn-white zg-r3px zu-button-more" style="">更多</a>
+                </div>
+
+                <div class="tab-pane fade" data-feedtype="topstory" id="youAgree"
+                     data-widget="navigable"
+                     data-navigable-options="{&quot;items&quot;:&quot;&gt; .zh-general-list .feed-content&quot;,&quot;offsetTop&quot;:-82}">
+                    <a href="javascript:;" class="zu-main-feed-fresh-button" id="zh-main-agree-fresh-button"
+                       style="display:none"></a>
+                    <div id="js-agree-feed-list" class="zh-general-list topstory clearfix"
+                         data-init="{&quot;params&quot;: {}, &quot;nodename&quot;: &quot;TopStory2FeedList&quot;}"
+                         data-delayed="true" data-za-module="TopStoryFeedList">
+
+                    </div>
+                    <a href="javascript:;" id="load-more-agree" data-method="next" class="zg-btn-white zg-r3px zu-button-more" style="">更多</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+#parse("js.html")
+<script type="text/javascript" src="/scripts/main/site/detail.js"></script>
+<script type="text/javascript" src="/scripts/main/site/loadFeeds.js"></script>
+#parse("footer.html")

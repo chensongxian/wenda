@@ -1,0 +1,128 @@
+#parse("header.html")
+<link rel="stylesheet" href="../styles/index.css">
+<link rel="stylesheet" href="../styles/detail.css">
+<link rel="stylesheet" href="../styles/set.css">
+<div class="zg-wrap zu-main clearfix " role="main">
+    <div class="zm-profile-section-wrap zm-profile-followee-page">
+        <!--
+            <div class="zm-profile-section-head">
+                <span class="zm-profile-section-name">
+                    <a href="#">${profileUser.user.name}</a> 关注了 ${profileUser.followerCount} 人
+                </span>
+            </div>-->
+        <div class="zm-profile-section-list">
+            <div id="zh-profile-follows-list">
+                <div class="zh-general-list clearfix">
+                    <div class="zm-profile-card zm-profile-section-item zg-clear no-hovercard">
+
+                        <a title="Barty" class="zm-item-link-avatar" href="/user/${profileUser.user.id}">
+                            <img src="${profileUser.user.headUrl}" class="zm-item-img-avatar">
+                        </a>
+                        <div class="zm-list-content-medium">
+                            <h2 class="zm-list-content-title"><a data-tip="p$t$buaabarty"
+                                                                 href="/user/${profileUser.user.id}" class="zg-link">${profileUser.user.name}</a>
+                            </h2>
+
+                            <!-- <div class="zg-big-gray">计蒜客教研首席打杂</div> -->
+                            <div class="details zg-gray">
+                                <a target="_blank" href="/user/${profileUser.user.id}/followers"
+                                   class="zg-link-gray-normal">${profileUser.followerCount}粉丝</a>
+                                /
+                                <a target="_blank" href="/user/${profileUser.user.id}/followees"
+                                   class="zg-link-gray-normal">${profileUser.followeeCount}关注</a>
+                                /
+                                <a target="_blank" href="#" class="zg-link-gray-normal">${profileUser.commentCount}
+                                    回答</a>
+                                /
+                                <a target="_blank" href="#" class="zg-link-gray-normal">548 赞同</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="zu-main-content">
+        <div class="zu-main-content-inner">
+            <div class="module-body">
+                <!-- 修改登录邮箱 -->
+                <div class="profile-info-box edit-box" id="setLoginEmail">
+                    <div class="profile-caption">
+                        <h3 class="info-title prf-none">登录邮箱</h3>
+                    </div>
+                    <div class="info-box set-msg-box info-edit-box">
+                        <dl>
+                            <dt>原邮箱</dt>
+                            <dd class="old-email">1164077611@qq.com</dd>
+                            <span class="verify-tips"></span>
+                        </dl>
+                        <dl>
+                            <dt>新邮箱</dt>
+                            <dd class="control-group" id="component_4_input_3">
+                                <input type="text" class="form-control new-email">
+                                <i class="input-icon fui-cross"></i><i class="input-icon fui-check-inverted"></i><span
+                                    class="input-tip"></span></dd>
+                        </dl>
+                        <div class="info-edit-box ">
+                            <dl>
+                                <dt>&nbsp;</dt>
+                                <dd>
+                                    <a href="javascript:;" class="btn  btn-primary btn-lg btn-info-save">保存</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 登陆密码 -->
+                <div class="profile-info-box edit-box" id="setLoginPwd">
+                    <div class="profile-caption">
+                        <h3 class="info-title prf-none">登录密码</h3>
+                    </div>
+                    <div class="info-box set-msg-box info-edit-box">
+                        <dl>
+                            <dt>原密码</dt>
+                            <dd class="control-group" id="component_1_input_0">
+                                <input type="password" class="form-control old-pw">
+                                <i class="input-icon fui-cross"></i><i class="input-icon fui-check-inverted"></i><span
+                                    class="input-tip"></span></dd>
+                        </dl>
+                        <dl>
+                            <dt>新密码</dt>
+                            <dd class="control-group" id="component_2_input_1">
+                                <input type="password" class="form-control new-pw">
+                                <i class="input-icon fui-cross"></i><i class="input-icon fui-check-inverted"></i><span
+                                    class="input-tip"></span></dd>
+                        </dl>
+                        <dl>
+                            <dt>重输新密码</dt>
+                            <dd class="control-group" id="component_3_input_2">
+                                <input type="password" class="form-control new-repw">
+                                <i class="input-icon fui-cross"></i><i class="input-icon fui-check-inverted"></i><span
+                                    class="input-tip"></span></dd>
+                        </dl>
+                        <div class="info-edit-box ">
+                            <dl>
+                                <dt>&nbsp;</dt>
+                                <dd>
+                                    <a href="javascript:;" class="btn  btn-primary btn-lg btn-info-save">保存</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="edit-info-tip"><span class="font-red">*</span>如首次修改密码，请<a href="/forgot-pwd"
+                                                                                          target="_blank"
+                                                                                          class="link-green">点击此处</a>进行修改
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+#parse("js.html")
+<script type="text/javascript" src="/scripts/main/site/profile.js"></script>
+<script type="text/javascript" src="/scripts/main/site/user.js"></script>
+#parse("footer.html")

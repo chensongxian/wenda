@@ -1,0 +1,39 @@
+#parse("header.html")
+<link rel="stylesheet" href="http://localhost:8080/styles/index.css">
+<link rel="stylesheet" href="http://localhost:8080/styles/sendEmail.css">
+
+<body>
+<div class="nk-container    ">
+
+    <div class="nk-main clearfix">
+        <div class="wrapper">
+            <div class="module-head clearfix">
+                <h1>激活绑定邮箱</h1>
+            </div>
+            <div class="getpwd-main">
+                <div class="step2-main clearfix">
+                    <img src="//static.nowcoder.com/images/emailpic.png">
+                    <div class="step2-content">
+                        <h2>激活邮件已发送，登录邮箱验证后，即可完成绑定，绑定后此邮箱也可用于登录。</h2>
+                        <p>只需登录邮箱$!{email}点击链接激活即可，验证激活后账号更安全。（Gmail邮箱邮件发送可能会有延迟，请耐心等待）</p>
+                        <a href="javascript:void(0);" target="_blank" id="verifyEmailLink" class="btn btn-primary btn-block">立即去邮箱激活账号</a>
+                    </div>
+                </div>
+                <div class="getpwd-tip">
+                    <dl>
+                        <dt>还没有收到激活账号邮件？</dt>
+                        <dd>1：尝试到广告邮件、垃圾邮件目录里找找看</dd>
+                        <dd>2：再次发送验证邮件</dd>
+                        <dd>3：如果重发注册验证邮件仍然没有收到，请更换另一个邮件地址</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+#parse("footer.html")
+
