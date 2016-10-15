@@ -1,0 +1,28 @@
+#parse("header.html")
+<link rel="stylesheet" href="../../styles/result.css">
+<link rel="stylesheet" href="../../styles/detail.css">
+<div id="main">
+    <div class="zg-wrap zu-main clearfix ">
+        <div class="zm-profile-section-wrap zm-profile-followee-page">
+            <div class="zm-profile-section-wrap">
+                <div class="zm-profile-section-head">
+                    <a class="zm-profile-section-title"
+                       href="#">
+                        <h2 class="zm-profile-section-name">回答</h2>
+                        <i class="zg-right zg-icon zm-profile-section-more-btn"></i>
+                    </a>
+                </div>
+                <div class="zm-profile-section-list" id="zh-profile-answers-inner-list">
+                    <input type="hidden" value="$!{userId}" id="userId">
+
+                </div>
+                <a aria-role="button" class="zg-btn-white zu-button-more">更多</a>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+#parse("js.html")
+<script type="text/javascript" src="/scripts/main/site/profileAnswer.js"></script>
+#parse("footer.html")

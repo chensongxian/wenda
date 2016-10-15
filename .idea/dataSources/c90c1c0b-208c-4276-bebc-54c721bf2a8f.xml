@@ -1,0 +1,302 @@
+<dataSource name="MySQL - wenda@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="wenda">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="babasport" />
+    <schema id="3" name="board" />
+    <schema id="4" name="bookstore" />
+    <schema id="5" name="c" />
+    <schema id="6" name="crm" />
+    <schema id="7" name="csxoa" />
+    <schema id="8" name="csxtax" />
+    <schema id="9" name="db_jsp" />
+    <schema id="10" name="dedecmsv57utf8sp1" />
+    <schema id="11" name="ecshop" />
+    <schema id="12" name="hibernate_1" />
+    <schema id="13" name="houserent" />
+    <schema id="14" name="information_schema" />
+    <schema id="15" name="itcastoa_20120216" />
+    <schema id="16" name="mysql" />
+    <schema id="17" name="nowstagram" />
+    <schema id="18" name="performance_schema" />
+    <schema id="19" name="php34" />
+    <schema id="20" name="shop" />
+    <schema id="21" name="shop34" />
+    <schema id="22" name="shopcsx" />
+    <schema id="23" name="spring_1" />
+    <schema id="24" name="taotao" />
+    <schema id="25" name="test" />
+    <schema id="26" name="text" />
+    <schema id="27" name="toutiao" />
+    <schema id="28" name="ultrax" />
+    <table id="29" parent="1" name="comment" />
+    <table id="30" parent="1" name="login_ticket" />
+    <table id="31" parent="1" name="message" />
+    <table id="32" parent="1" name="question" />
+    <table id="33" parent="1" name="user" />
+    <table id="34" parent="1" name="feed" />
+    <table id="35" parent="1" name="topic" />
+    <table id="36" parent="1" name="test" />
+    <column id="37" parent="29" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="38" parent="29" name="content">
+      <mandatory>1</mandatory>
+      <data-type>text|0</data-type>
+    </column>
+    <column id="39" parent="29" name="user_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="40" parent="29" name="entity_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="41" parent="29" name="entity_type">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="42" parent="29" name="created_date">
+      <mandatory>1</mandatory>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="43" parent="29" name="status">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>'0'</default-expression>
+    </column>
+    <column id="44" parent="29" name="score">
+      <data-type>double|0</data-type>
+      <default-expression>'0'</default-expression>
+    </column>
+    <index id="45" parent="29" name="entity_index">
+      <columns>entity_id
+entity_type</columns>
+      <desc-columns />
+    </index>
+    <key id="46" parent="29" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="47" parent="30" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="48" parent="30" name="user_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="49" parent="30" name="ticket">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="50" parent="30" name="expired">
+      <mandatory>1</mandatory>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="51" parent="30" name="status">
+      <data-type>int(11)|0</data-type>
+      <default-expression>'0'</default-expression>
+    </column>
+    <index id="52" parent="30" name="ticket_UNIQUE">
+      <columns>ticket</columns>
+      <desc-columns />
+      <unique>1</unique>
+    </index>
+    <key id="53" parent="30" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="54" parent="30" name="ticket_UNIQUE">
+      <columns>ticket</columns>
+      <underlying-index>ticket_UNIQUE</underlying-index>
+    </key>
+    <column id="55" parent="31" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="56" parent="31" name="from_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="57" parent="31" name="to_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="58" parent="31" name="content">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="59" parent="31" name="created_date">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="60" parent="31" name="has_read">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="61" parent="31" name="conversation_id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <index id="62" parent="31" name="conversation_index">
+      <columns>conversation_id</columns>
+      <desc-columns />
+    </index>
+    <index id="63" parent="31" name="created_date">
+      <columns>created_date</columns>
+      <desc-columns />
+    </index>
+    <key id="64" parent="31" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="65" parent="32" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="66" parent="32" name="title">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="67" parent="32" name="content">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="68" parent="32" name="user_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="69" parent="32" name="created_date">
+      <mandatory>1</mandatory>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="70" parent="32" name="comment_count">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="71" parent="32" name="topic_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="72" parent="32" name="score">
+      <data-type>double|0</data-type>
+      <default-expression>'0'</default-expression>
+    </column>
+    <index id="73" parent="32" name="date_index">
+      <columns>created_date</columns>
+      <desc-columns />
+    </index>
+    <key id="74" parent="32" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="75" parent="33" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="76" parent="33" name="name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(64)|0</data-type>
+      <default-expression>''</default-expression>
+    </column>
+    <column id="77" parent="33" name="password">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+      <default-expression>''</default-expression>
+    </column>
+    <column id="78" parent="33" name="salt">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+      <default-expression>''</default-expression>
+    </column>
+    <column id="79" parent="33" name="head_url">
+      <mandatory>1</mandatory>
+      <data-type>varchar(256)|0</data-type>
+      <default-expression>''</default-expression>
+    </column>
+    <column id="80" parent="33" name="email">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="81" parent="33" name="sex">
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>'1'</default-expression>
+    </column>
+    <column id="82" parent="33" name="introduction">
+      <data-type>varchar(256)|0</data-type>
+      <default-expression>''</default-expression>
+    </column>
+    <column id="83" parent="33" name="livePlace">
+      <data-type>varchar(100)|0</data-type>
+      <default-expression>''</default-expression>
+    </column>
+    <index id="84" parent="33" name="name">
+      <columns>name</columns>
+      <desc-columns />
+      <unique>1</unique>
+    </index>
+    <key id="85" parent="33" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <key id="86" parent="33" name="name">
+      <columns>name</columns>
+      <underlying-index>name</underlying-index>
+    </key>
+    <column id="87" parent="34" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="88" parent="34" name="created_date">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="89" parent="34" name="user_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="90" parent="34" name="data">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="91" parent="34" name="type">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="92" parent="34" name="type_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="93" parent="34" name="user_index">
+      <columns>user_id</columns>
+      <desc-columns />
+    </index>
+    <key id="94" parent="34" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="95" parent="35" name="topic_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="96" parent="35" name="topic">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="97" parent="35" name="PRIMARY">
+      <columns>topic_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="98" parent="36" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="99" parent="36" name="content">
+      <mandatory>1</mandatory>
+      <data-type>text|0</data-type>
+    </column>
+    <key id="100" parent="36" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.csx.dao.CommentDAO">
+    <sql id="table">comment</sql>
+    <sql id="selectFields">id, user_id, content, created_date, entity_id, entity_type, status,score
+    </sql>
+    <select id="selectCommentByEntity" resultType="com.csx.model.Comment">
+        SELECT
+        <include refid="selectFields"/>
+        FROM
+        <include refid="table"/>
+        WHERE entity_id=#{entityId}
+        AND entity_type=#{entityType}
+
+        ORDER BY created_date  DESC
+        LIMIT #{offset},#{limit}
+    </select>
+
+    <select id="selectCommentByEntityAndScore" resultType="com.csx.model.Comment">
+        SELECT
+        <include refid="selectFields"/>
+        FROM
+        <include refid="table"/>
+        WHERE entity_id=#{entityId}
+        AND entity_type=#{entityType}
+
+        ORDER BY score  DESC
+        LIMIT #{offset},#{limit}
+    </select>
+
+
+</mapper>

@@ -1,0 +1,85 @@
+#set($bodyclass = "page-search")
+#parse("header.html")
+
+
+<link rel="stylesheet" href="../styles/result.css">
+<link rel="stylesheet" href="../styles/detail.css">
+<div class="zg-wrap zu-main clearfix" role="main">
+    <div class="zu-main-content">
+        <div class="zu-main-content-inner">
+
+            <div class="zg-section" id="zh-home-list-title">
+                <ul id="myTab" class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#content" data-toggle="tab" id="content_tab">内容</a>
+                    </li>
+                    <li class="nc-req-auth">
+                        <a href="#user" data-toggle="tab" id="user_tab">用户</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="tab-content">
+                <input type="hidden" value="$!{keyword}" id="keyword"/>
+                <div class="tab-pane fade" id="content">
+                    <ul class="list contents navigable" id="searchContentList">
+
+                    </ul>
+                    <a href="javascript:;" id="search-load-content" class="zg-btn-white zg-r3px zu-button-more">更多</a>
+                </div>
+
+                <div class="tab-pane fade in active" id="user">
+
+                    <div id="js-user-list" class="zh-general-list topstory clearfix"
+                         data-init="{&quot;params&quot;: {}, &quot;nodename&quot;: &quot;TopStory2FeedList&quot;}"
+                         data-delayed="true" data-za-module="TopStoryFeedList">
+                        #foreach($vo in $userList)
+                        <div class="zm-profile-card zm-profile-section-item zg-clear no-hovercard">
+                            #if($vo.followed)
+                            <div class="zg-right">
+                                <button class="zg-btn zg-btn-unfollow zm-rich-follow-btn small nth-0
+                                    js-follow-user" data-status="1" data-id="$vo.user.id">取消关注</button>
+                            </div>
+                            #else
+                            <div class="zg-right">
+                                <button class="zg-btn zg-btn-follow zm-rich-follow-btn small nth-0
+                                    js-follow-user">关注</button>
+                            </div>
+                            #end
+                            <a title="Barty" class="zm-item-link-avatar" href="/user/${vo.user.id}">
+                                <img src="${vo.user.headUrl}" class="zm-item-img-avatar">
+                            </a>
+                            <div class="zm-list-content-medium">
+                                <h2 class="zm-list-content-title"><a data-tip="p$t$buaabarty" href="/user/${vo.user.id}" class="zg-link" title="Barty">${vo.user.name}</a></h2>
+
+                                <!-- <div class="zg-big-gray">计蒜客教研首席打杂</div> -->
+                                <div class="details zg-gray">
+                                    <a target="_blank" href="/user/${vo.user.id}/followers" class="zg-link-gray-normal">${vo.followerCount}粉丝</a>
+                                    /
+                                    <a target="_blank" href="/user/${vo.user.id}/followees" class="zg-link-gray-normal">${vo.followeeCount}关注</a>
+                                    /
+                                    <a target="_blank" href="#" class="zg-link-gray-normal">${vo.commentCount} 回答</a>
+                                    /
+                                    <a target="_blank" href="#" class="zg-link-gray-normal">548 赞同</a>
+                                </div>
+                            </div>
+                        </div>
+                        #end
+
+                    </div>
+                    <a href="javascript:;" id="search-load-user" class="zg-btn-white zg-r3px zu-button-more">更多</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+#parse("js.html")
+<script type="text/javascript" src="/scripts/main/site/loadSearch.js"></script>
+<script>
+    $(function () {
+        $('#myTab li:eq(1) a').tab('show');
+    });
+</script>
+#parse("footer.html")
