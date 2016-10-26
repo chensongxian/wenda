@@ -12,7 +12,7 @@
       <introspection-scope>wenda:</introspection-scope>
       <resolve-scope>wenda:</resolve-scope>
     </data-source>
-    <data-source name="MySQL - wenda@119.29.223.150" uuid="30f23cb9-7122-4399-bede-ddfbb9ad9bee">
+    <data-source name="MySQL - wenda@119.29.223.150" uuid="acd674d2-4c79-4da9-bac5-887b381eef6f">
       <database-info product="MySQL" version="5.6.31" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
